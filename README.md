@@ -39,7 +39,7 @@ The JWT AuthHeader needs to be passed everytime a user makes a call to the API
 - ```/updateTask```
     - Request Type: POST
     - URL Parameter(s):
-        - **id**: Id of the task to be updated (INTEGER)
+        - **id** (INTEGER): Id of the task to be updated
     - The following fields can be passed in the payload:
         - **due_date** (STRING): Due date in (dd/MM/YYY) format
         - **status** (STRING): Has to be either "TODO" or "DONE"
@@ -66,3 +66,12 @@ The JWT AuthHeader needs to be passed everytime a user makes a call to the API
     - URL Parameter(s) (optional):
         - **task_id** (INTEGER): Filter by task_id
     - Returns the list of all the subtasks, that matches the filters, of the user who made the request
+- ```/deleteTask```
+    - Request Type: POST
+    - URL Parameter(s):
+        - **task_id** (INTEGER): Task Id of the task that needs to be deleted.
+- ```/deleteSubTask```
+    - Request Type: POST
+    - URL Parameter(s):
+        - **subtask_id** (INTEGER): Subtask Id of the subtask that needs to be deleted.
+***
